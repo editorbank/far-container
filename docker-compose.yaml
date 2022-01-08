@@ -1,6 +1,8 @@
 version: '3'
 services:
   win1:
-    build: .
-    container_name: win1
-    image: win1
+    image: mcr.microsoft.com/windows/servercore:20H2-KB5008212
+    container_name: far-container
+    volumes:
+      - "C:\\Program Files\\Far Manager:C:\\Program Files\\Far Manager"
+    command: ["C:\\Program Files\\Far Manager\\Far.exe"]
