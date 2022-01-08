@@ -1,0 +1,6 @@
+version: '3'
+services:
+  win1:
+    build: .
+    container_name: win1
+    image: win1
